@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>My Library</title>
+    
 </head>
 <body>
     <header>
@@ -21,14 +22,14 @@
         <form class="form"> 
             <h4>Enter book details</h4>
             <label>Title:   </label>              
-            <input type="text" name="title" class="title">
+            <input type="text" name="title"  id="title">
             <label>Author:</label>
-            <input type="text" name="author" class="author">
+            <input type="text" name="author" id="author">
             <label>No. of Pages:</label>
-            <input type="number" name="pages" class="pages">
+            <input type="number" name="pages" id="pages">
             <div class="select">
                 <label>Status:
-                    <select class="status">
+                    <select class="status" id="status">
                         <option value="none">Select</option>
                         <option value="read">Read</option>
                         <option value="not-read">Not Read</option>
@@ -39,8 +40,8 @@
             <button class="removebtn" type="submit">Cancel</button>                
         </form>
 
-        <div class="library-container">
-            <!--Add display div-->
+        <div class="library-container">            
+                 <!--Add display div -->          
         </div>
 
     </main>

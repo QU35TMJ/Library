@@ -34,7 +34,7 @@ function Book(title, author, pages, status) {
 
 let myLibrary = [];
 let book1 = new Book("The Lord of the Rings: The Fellowship of the Ring", "J. R. R. Tolkien", 9250, "Not read");
-let book2 = new Book("Harry Potter", "J. K. Rowling", 500, "read");
+let book2 = new Book();
 
 myLibrary.push(book1);
 myLibrary.push(book2);
@@ -42,27 +42,19 @@ showBook();
 
 
 
-function addBookToLibrary() {
-  let title = document.getElementById('title');
-  let author = document.getElementById('author');
-  let pages = document.getElementById('pages');
-  let status = document.getElementById('status');
-
-  if (title.length > 1 && author.length > 1 && pages > 1) {
-      myLibrary.push(new Book(title, author, pages, status));
-      showBook();
-  } else {
-      alert("This book isn't valid")
-  }
+function addBookToLibrary(title, author, pages, status) {
+  
+  const book = new Book(title, author, pages, "Not-read");
+  myLibrary.push(book);
+  showBook(); 
 }
-
 
 function showBook(){
   library.innerHTML = '';
-  myLibrary.forEach(book => displayBook(book));
+  myLibrary.forEach(displayBook);
 }
 //show book
-function displayBook(book){
+function displayBook(){
  //e.preventDefault();
  //create display div
  const bookDiv = document.createElement('div');
@@ -74,21 +66,22 @@ function displayBook(book){
  let status = document.getElementById('status');
  
  const newTitle = document.createElement('h3');
+ newTitle.innerText = 'hey';
  const newAuthor = document.createElement('h4');
  const newPages = document.createElement('h5');
  const newRead = document.createElement('h4');
  
- newTitle.textContent = book.title;
- newAuthor.textContent = 'By: ' + book.author;
- newPages.textContent = book.pages + ' pages';
- newRead.textContent = book.status;
+ newTitle.textContent = title.value;
+ newAuthor.textContent = 'By:' + author.value;
+ newPages.textContent = pages.value + 'pages';
+ newRead.textContent = status.value;
  
  bookDiv.appendChild(newTitle);
  bookDiv.appendChild(newAuthor);
  bookDiv.appendChild(newPages);
  bookDiv.appendChild(newRead);
  
- // give each book a data attribute representing the index to help with removal of bookDivs
+ // give each book a data attribute representing the index to help with removal of cards
  //bookDiv.setAttribute('data-index', i);
  
  // create delete button
@@ -105,9 +98,7 @@ function displayBook(book){
  
  
  library.appendChild(bookDiv);
-
- 
  
  }
   
- 
+
