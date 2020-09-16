@@ -161,6 +161,7 @@ function displayBook(book){
 
  library.appendChild(newBook);
  removeForm();
+ 
  }
  function removeForm(){
    form.style.display = 'none';
@@ -168,11 +169,11 @@ function displayBook(book){
 
  function deleteCheck(e){
   const item = e.target;
+  
   // delete To do
   if(item.classList[0] === "delete-book"){
       const lib = item.parentElement;
-      lib.remove();
-      animation
+      //animation
       lib.classList.add("fall");
       //special eventListener to wait for transformaion to end before deleting
       lib.addEventListener("transitionend", function(){
@@ -182,9 +183,9 @@ function displayBook(book){
   }
   // check
   if(item.classList[0] === "read-book"){
-
-      const lib = item.parentElement;
-      lib.classList.toggle("read");
+    const lib = item.parentElement;
+    lib.classList.toggle("read");    
+    
   } 
 
 }
