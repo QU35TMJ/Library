@@ -33,12 +33,12 @@ function Book(title, author, pages, status) {
   this.title = title
   this.author = author
   this.pages = pages
-  this.status = status
+  //this.status = status
 }
 
 let myLibrary = [];
-let book1 = new Book("The Lord of the Rings: The Fellowship of the Ring", "J. R. R. Tolkien", 9250, "Not read");
-let book2 = new Book("Harry Potter", "J. K. Rowling", 500, "Read");
+let book1 = new Book("The Lord of the Rings: The Fellowship of the Ring", "J. R. R. Tolkien", 9250);
+let book2 = new Book("Harry Potter", "J. K. Rowling", 500);
 
 myLibrary.push(book1);
 myLibrary.push(book2);
@@ -80,23 +80,23 @@ function displayBook(book){
  newAuthor.classList.add('book-details');
  const newPages = document.createElement('h5');
  newPages.classList.add('book-details');
- const newStatus = document.createElement('h4');
- newStatus.classList.add('books-details');
+ /*const newStatus = document.createElement('h4');
+ newStatus.classList.add('books-details');*/
 
  let title = document.getElementById('title');
  let author = document.getElementById('author');
  let pages = document.getElementById('pages');
- let status = document.getElementById('status');
+ //let status = document.getElementById('status');
  
  newTitle.textContent = book.title;
  newAuthor.textContent = 'By: ' + book.author;
  newPages.textContent = book.pages + ' pages';
- newStatus.textContent = book.status;
+ //newStatus.textContent = book.status;
  
  bookDiv.appendChild(newTitle);
  bookDiv.appendChild(newAuthor);
  bookDiv.appendChild(newPages);
- bookDiv.appendChild(newStatus);
+ //bookDiv.appendChild(newStatus);
  
  // give each book a data attribute representing the index to help with removal of bookDivs
  //bookDiv.setAttribute('data-index', i);
@@ -123,7 +123,7 @@ function displayBook(book){
   let title = document.getElementById('title');
   let author = document.getElementById('author');
   let pages = document.getElementById('pages');
-  let status = document.getElementById('status');
+ // let status = document.getElementById('status');
 
   let newBook = document.createElement('div');
   newBook.classList.add('new-book');
@@ -137,14 +137,14 @@ function displayBook(book){
   let bpages = document.createElement('h5');
   bpages.classList.add('book-details');
   bpages.textContent = pages.value + ' pages';
-  let bstatus = document.createElement('h4');
+  /*let bstatus = document.createElement('h4');
   bstatus.classList.add('books-details');
-  bstatus.textContent = status.value;
+  bstatus.textContent = status.value;*/
 
   newBook.appendChild(btitle);
   newBook.appendChild(bauthor);
   newBook.appendChild(bpages);
-  newBook.appendChild(bstatus);
+  //newBook.appendChild(bstatus);
  
 
   // create delete button
