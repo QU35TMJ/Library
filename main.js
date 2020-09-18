@@ -174,12 +174,6 @@ function displayBook(book){
   if(item.classList[0] === "delete-book"){
       const lib = item.parentElement;
       lib.remove();
-      //animation
-      //lib.classList.add("fall");
-      //special eventListener to wait for transformaion to end before deleting
-      //lib.addEventListener("transitionend", function(){
-          
-      //});
       
   }
   // check
