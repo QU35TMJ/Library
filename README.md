@@ -4,4 +4,4 @@ A project on using Objects and Objects constructors in js
 -map(),replace(),filter()
 -local storage
 
-/*My project is incomplete but i'm working of incuding the project's lessons to give the complete outlook*/
+Live Preview  https://qu35tmj.github.io/Library/
